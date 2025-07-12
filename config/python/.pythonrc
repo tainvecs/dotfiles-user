@@ -1,0 +1,8 @@
+import os
+import sys
+import readline
+import rlcompleter
+
+# Clear function
+def clear():
+    os.system("clear")

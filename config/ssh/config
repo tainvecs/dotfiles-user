@@ -1,0 +1,7 @@
+# Host *
+#     IgnoreUnknown            AddKeysToAgent,UseKeychain
+#     AddKeysToAgent           yes
+#     UseKeychain              yes
+#     UserKnownHostsFile       ${SSH_CONFIG_DIR}/known_hosts
+#     IdentityFile             ${SSH_CRED_DIR}/id_ed25519
+#     IdentitiesOnly           yes
