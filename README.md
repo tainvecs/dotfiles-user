@@ -86,9 +86,15 @@ dotfiles/user
   - Some packages are enabled by default. Update the env variable `DOTFILES_USER_PACKAGE_ARR` to enable or disable packages. See the example [here](https://github.com/tainvecs/dotfiles-user/blob/main/env/package.env).
   - All files with the `.env` extension will be sourced by `.zshrc` when the shell starts. Users can create their own env files.
 - `config`
-  - Reference the `User Config` columns in the Packages and Built-in Configurations tables, and create the respective configuration files in this `config` folder. They will be automatically linked to the `dotfiles/.local` directory when the shell starts.
+  - Refer to the `User Config` columns in the Packages and Built-in Configurations tables, and create the respective configuration files in this `config` folder. They will be automatically linked to the `dotfiles/.local` directory when the shell starts.
+  - To manage more than one set of configurations for different computers, users can set the environment variable `DOTFILES_USER_PROFILE`. For example, add this line of code to your `~/.zshenv`:
+    ```zsh
+    export DOTFILES_USER_PROFILE=my_profile
+    ```
+    This profile will be used as a prefix (e.g., `my_profile-`) to match configuration files, such as `aws/my_profile-config`, and will fall back to `aws/config` if `aws/my_profile-config` is not found.
 - `secret`
-  - Similar to the `config` directory, reference the `User Secret` columns and create the respective secret files or directories.
+  - Similar to the `config` directory, refer to the `User Secret` columns and create the respective secret files or directories.
+  - The user profile environment variable works the same way as in the config section.
 - `completion`
   - This directory is added to `fpath`. Users can create their own Zsh completion files in this directory.
   - If completions are not autoloaded, run the following commands to clear the cache and reinitialize the Zsh completion system:
