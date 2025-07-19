@@ -43,6 +43,7 @@ The table below lists the packages managed by [dotfiles]. [dotfiles] manages the
 | gcp                       | ✅               | ✅                  | gcp/config_default                        |                 |                 |
 | go                        | ✅               | ✅                  |                                           |                 |                 |
 | htop                      | ✅               | ✅                  | htop/htoprc                               |                 | ✅              |
+| hyperfine                 | ✅               | ✅                  |                                           |                 |                 |
 | iterm                     | ✅               |                     |                                           |                 |                 |
 | jdk                       | ✅               | ✅                  |                                           |                 | ✅              |
 | keyd                      |                  | ✅                  | keyd/default.conf                         |                 |                 |
